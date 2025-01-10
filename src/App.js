@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import './App.css';
-import chefImage from './IMG_4733.jpg';
 
 function App() {
   return (
@@ -73,7 +72,10 @@ function Story() {
         
         <div className="chef-section">
           <div className="chef-image">
-            <img src={chefImage} alt="Head Chef" />
+            <img 
+              src="https://github.com/user-attachments/assets/d0c22184-da8f-493d-b62e-c20027161b09" 
+              alt="Head Chef" 
+            />
           </div>
           <div className="chef-info">
             <h3>Head Chef</h3>
