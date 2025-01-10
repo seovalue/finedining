@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import './App.css';
+import chefImage from './IMG_4733.jpg';
 
 function App() {
   return (
@@ -72,7 +73,7 @@ function Story() {
         
         <div className="chef-section">
           <div className="chef-image">
-            <p className="image-notice">2025년 1월 28일 이미지 공개 예정</p>
+            <img src={chefImage} alt="Head Chef" />
           </div>
           <div className="chef-info">
             <h3>Head Chef</h3>
