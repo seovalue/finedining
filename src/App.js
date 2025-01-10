@@ -48,7 +48,7 @@ function Menu() {
           <p className="price">시가에 따라 변동</p>
         </div>
         <div className="opening-notice">
-          <p>2024년 1월 28일 신규 오픈 예정</p>
+          <p>2025년 1월 28일 신규 오픈 예정</p>
         </div>
       </div>
     </div>
@@ -65,10 +65,14 @@ function Story() {
           모던 한식 다이닝입니다. 제철 식재료를 활용한 
           독창적인 요리를 통해 새로운 미식 경험을 선사합니다.
         </p>
+        <br />
+        <p>
+          2025년 1월 28일 신규 오픈 예정입니다.
+        </p>
         
         <div className="chef-section">
           <div className="chef-image">
-            {/* 셰프 이미지가 들어갈 자리 */}
+            <p className="image-notice">2025년 1월 28일 이미지 공개 예정</p>
           </div>
           <div className="chef-info">
             <h3>Head Chef</h3>
