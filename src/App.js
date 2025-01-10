@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -7,18 +7,19 @@ function App() {
       <div className="App">
         <nav className="navbar">
           <div className="logo">
-            <Link to="/">月燈 (월등)</Link>
+            <Link to="/finedining">月燈 (월등)</Link>
           </div>
           <div className="nav-links">
-            <Link to="/story">OUR STORY</Link>
-            <Link to="/menu">MENU</Link>
+            <Link to="/finedining/story">OUR STORY</Link>
+            <Link to="/finedining/menu">MENU</Link>
           </div>
         </nav>
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/story" element={<Story />} />
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/finedining" element={<Home />} />
+          <Route path="/finedining/story" element={<Story />} />
+          <Route path="/finedining/menu" element={<Menu />} />
+          <Route path="/" element={<Navigate to="/finedining" replace />} />
         </Routes>
       </div>
     </Router>
