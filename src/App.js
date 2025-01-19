@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
-import chefImageWebp from './assets/chef.webp';
+import headChefImageWebp from './assets/head-chef.webp';
+import sousChefImageWebp from './assets/sous-chef.webp';
 
 function App() {
   return (
@@ -103,8 +104,8 @@ function Menu() {
 
 function Story() {
   const [imageLoaded, setImageLoaded] = useState(false);
-  const fallbackImage = "https://github.com/user-attachments/assets/d0c22184-da8f-493d-b62e-c20027161b09";
-
+  const headChefFallbackImage = "https://github.com/user-attachments/assets/d0c22184-da8f-493d-b62e-c20027161b09";
+  const sousChefFallbackImage = "https://github.com/user-attachments/assets/47319102-df88-4722-a59b-a6e395f74931";
   return (
     <div className="story-page">
       <h2>Our Story</h2>
@@ -120,11 +121,12 @@ function Story() {
         </p>
         
         <div className="chef-section">
+          <div className={'head-chef-section'}>
           <div className={`chef-image ${!imageLoaded ? 'loading' : ''}`}>
             <picture>
-              <source srcSet={chefImageWebp} type="image/webp" />
+              <source srcSet={headChefImageWebp} type="image/webp" />
               <img 
-                src={fallbackImage}
+                src={headChefFallbackImage}
                 alt="Head Chef"
                 loading="lazy"
                 onLoad={() => setImageLoaded(true)}
@@ -141,6 +143,29 @@ function Story() {
               <p>- 정보 처리 기사 자격증 취득</p>
               <p>- 경희대학교 응용수학과 및 컴퓨터공학과 복수 전공</p>
             </div>
+          </div>
+          </div>
+          <div className={'sous-chef-section'}>
+          <div className={`chef-image ${!imageLoaded ? 'loading' : ''}`}>
+            <picture>
+              <source srcSet={sousChefImageWebp} type="image/webp" />
+              <img 
+                src={sousChefFallbackImage}
+                alt="Sous Chef"
+                loading="lazy"
+                onLoad={() => setImageLoaded(true)}
+              />
+            </picture>
+            {!imageLoaded && <div className="image-placeholder">이미지 로딩중...</div>}
+          </div>
+          <div className="chef-info">
+            <h3>Sous Chef</h3>
+            <h4>뀍수</h4>
+            <div className="chef-career">
+              <p>- 前 미슐랭 3스타 月燈 (월등) 수셰프</p>
+              <p>- 뀍수 출신</p>
+            </div>
+          </div>
           </div>
         </div>
       </div>
