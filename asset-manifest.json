@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/finedining/static/css/main.8f0e11dc.css",
-    "main.js": "/finedining/static/js/main.3a1638d3.js",
+    "main.css": "/finedining/static/css/main.2a848bf3.css",
+    "main.js": "/finedining/static/js/main.e0a59707.js",
     "index.html": "/finedining/index.html",
-    "main.8f0e11dc.css.map": "/finedining/static/css/main.8f0e11dc.css.map",
-    "main.3a1638d3.js.map": "/finedining/static/js/main.3a1638d3.js.map"
+    "main.2a848bf3.css.map": "/finedining/static/css/main.2a848bf3.css.map",
+    "main.e0a59707.js.map": "/finedining/static/js/main.e0a59707.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f0e11dc.css",
-    "static/js/main.3a1638d3.js"
+    "static/css/main.2a848bf3.css",
+    "static/js/main.e0a59707.js"
   ]
 }
