@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
+import chefImageWebp from './assets/chef.webp';
 
 function App() {
   return (
@@ -101,6 +102,9 @@ function Menu() {
 }
 
 function Story() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const fallbackImage = "https://github.com/user-attachments/assets/d0c22184-da8f-493d-b62e-c20027161b09";
+
   return (
     <div className="story-page">
       <h2>Our Story</h2>
@@ -116,11 +120,17 @@ function Story() {
         </p>
         
         <div className="chef-section">
-          <div className="chef-image">
-            <img 
-              src="https://github.com/user-attachments/assets/d0c22184-da8f-493d-b62e-c20027161b09" 
-              alt="Head Chef" 
-            />
+          <div className={`chef-image ${!imageLoaded ? 'loading' : ''}`}>
+            <picture>
+              <source srcSet={chefImageWebp} type="image/webp" />
+              <img 
+                src={fallbackImage}
+                alt="Head Chef"
+                loading="lazy"
+                onLoad={() => setImageLoaded(true)}
+              />
+            </picture>
+            {!imageLoaded && <div className="image-placeholder">이미지 로딩중...</div>}
           </div>
           <div className="chef-info">
             <h3>Head Chef</h3>
