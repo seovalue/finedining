@@ -115,7 +115,8 @@ body {
 
 .menu-item {
   text-align: center;
-  padding: 0.8rem;
+  padding: 1.2rem;  /* 패딩 약간 증가 */
+  position: relative;
 }
 
 .menu-item h3 {
@@ -137,6 +138,18 @@ body {
   font-size: 0.85rem;
   color: #666;
   font-style: italic;
+}
+
+.menu-item .pairing {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
 }
 
 /* 스토리 페이지 스타일링 */
@@ -386,14 +399,14 @@ body {
   background-color: #444;
 }
 
-.menu-notice {
-  text-align: center;
-  margin-top: 2rem;
-  padding: 1rem;
-}
-
-.menu-notice p {
-  font-size: 0.85rem;
-  color: #666;
-  font-style: italic;
+/* 메뉴 아이템 사이의 구분선 추가 */
+.menu-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
 }

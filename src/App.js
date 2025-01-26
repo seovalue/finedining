@@ -30,22 +30,10 @@ function App() {
 }
 
 function Home() {
-  const [showPopup, setShowPopup] = useState(true);
+  const [isLetterOpen, setIsLetterOpen] = useState(false);
 
   return (
     <div className="home">
-      {showPopup && (
-        <div className="update-popup">
-          <div className="popup-content">
-            <h3>메뉴가 업데이트되었어요 🎉</h3>
-            <p>새로운 메뉴를 확인해보세요.</p>
-            <div className="popup-buttons">
-              <Link to="/finedining/menu" className="menu-button">메뉴 보기</Link>
-              <button onClick={() => setShowPopup(false)}>닫기</button>
-            </div>
-          </div>
-        </div>
-      )}
       <div className="hero">
         <h1>月燈 (월등)</h1>
         <p>한식의 새로운 경험</p>
@@ -73,29 +61,29 @@ function Menu() {
 
         <div className="menu-item">
           <h3>『 전통의 맛 』</h3>
-          <p>산적꼬치와 칼칼한 어묵탕</p>
-          <p className="eng-menu">Grilled Skewered Meat with Spicy Fish Cake Soup</p>
+          <p>산적꼬치와 불고기말이</p>
+          <p className="eng-menu">Grilled Skewered Meat with Bulgogi</p>
+          <p className="pairing">Pairing: Georges Michel Marlborough Sauvignon Blanc</p>
         </div>
 
         <div className="menu-item">
           <h3>『 Happy Birthday 』</h3>
           <p>장어덮밥과 미역국</p>
           <p className="eng-menu">Grilled Eel Rice Bowl with Seaweed Soup</p>
+          <p className="pairing">Pairing: Sake</p>
         </div>
 
         <div className="menu-item">
           <h3>『 풍미의 여운 』</h3>
-          <p>함바그 스테이크</p>
-          <p className="eng-menu">Hamburg Steak</p>
+          <p>와규 스테이크</p>
+          <p className="eng-menu">Wagyu Steak</p>
+          <p className="pairing">Pairing: Sake or Wine</p>
         </div>
 
         <div className="menu-item">
           <h3>『 달콤한 피날레 』</h3>
-          <p>초콜릿과 미니 케이크</p>
-          <p className="eng-menu">Chocolate and Mini Cake</p>
-        </div>
-        <div className="menu-notice">
-          <p>* 메뉴는 변경될 수 있습니다.</p>
+          <p>초콜릿과 제철 설향 딸기</p>
+          <p className="eng-menu">Chocolate and Seasonal Strawberry</p>
         </div>
       </div>
     </div>
